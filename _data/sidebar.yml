@@ -1,0 +1,8 @@
+- name: Blog
+  url: /
+
+- name: All posts
+  url: /posts
+
+- name: Contact
+  url: /contact
