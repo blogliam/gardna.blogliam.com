@@ -35,8 +35,10 @@ body {
     max-width: $contentWidth;
 }
 
-img {
-    max-width: $contentWidth;
+#content img {
+    max-width: 900%;
+    max-height: 500px;
+    margin-left: 5%;
 }
 
 .monospace {
