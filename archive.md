@@ -1,7 +1,7 @@
 ---
 layout: default
 title: archive
-permalink: /archive
+permalink: /archive/
 ---
 
 # Blog history
