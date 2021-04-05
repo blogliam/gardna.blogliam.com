@@ -2,7 +2,7 @@ $backgroundColor: #ffffff;
 $bodyColor: #000000;
 $bodyFont: Georgia, serif;
 $trimColor: #878787;
-$contentWidth: 800px;
+$contentWidth: 900px;
 
 html,
 body {
@@ -31,6 +31,7 @@ body {
 
 #content {
     padding-left: 100px;
+    padding-right: 100px;
     max-width: $contentWidth;
 }
 
@@ -42,17 +43,20 @@ img {
     font-family: "Courier New", monospace;
 }
 
-@media only screen and (max-width: 1080px) {
+.mini {
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: $contentWidth) {
     #navbar {
         display: none;
     }
 
     #content {
         padding-right: 10px;
+        padding-left: 10px;
     }
-}
 
-@media only screen and (max-width: $contentWidth) {
     img {
         width: 110%;
     }

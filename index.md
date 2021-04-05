@@ -3,8 +3,8 @@ layout: default
 title: homepage
 ---
 
-<h1>Recent activity</h1>
-<hr/>
+# Recent activity
+___
 
 {% for post in site.posts %}
 <div class="pb-4">

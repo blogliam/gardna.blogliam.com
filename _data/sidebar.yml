@@ -1,8 +1,11 @@
-- name: Blog
+- name: Recent
   url: /
 
-- name: All posts
-  url: /posts
+- name: Archive
+  url: /archive
 
 - name: Contact
   url: /contact
+
+- name: Resume
+  url: https://www.dropbox.com/s/v5h83tdsosobhe2/William%20Gardner%20Resume.pdf?dl=1
