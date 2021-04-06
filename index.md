@@ -6,7 +6,7 @@ title: homepage
 # Recent activity
 ___
 
-{% for post in site.posts %}
+{% for post in site.posts limit:site.limits.feed %}
 <div class="pb-4">
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <h6 class="monospace">{{ post.date | date: "%D" }} {{ post.time }}</h6>
@@ -15,3 +15,6 @@ ___
     </div>
 </div>
 {% endfor %}
+
+<hr />
+<a href="/archive">view all posts</a>

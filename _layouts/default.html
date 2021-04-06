@@ -34,7 +34,7 @@
 
                         <span>Recent posts</span>
                         <ul>
-                            {% for post in site.posts %}
+                            {% for post in site.posts limit:site.limits.navbar %}
                             <li><a href="{{ post.url }}">
                                 {{ post.title | truncate: 24 }}
                             </a></li>

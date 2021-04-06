@@ -1,3 +1,6 @@
 url: gardna.blogliam.com
 title: william's blog
 permalink: pretty
+limits:
+  navbar: 12
+  feed: 8
