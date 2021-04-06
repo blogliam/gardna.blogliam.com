@@ -1,11 +1,11 @@
-- name: Recent
+- name: gardna.net
+  url: https://gardna.net/
+
+- name: blogliam.com
+  url: https://blogliam.com/
+
+- name: recent
   url: /
 
-- name: Archive
+- name: archive
   url: /archive
-
-- name: Contact
-  url: /contact
-
-- name: Resume
-  url: https://www.dropbox.com/s/v5h83tdsosobhe2/William%20Gardner%20Resume.pdf?dl=1
