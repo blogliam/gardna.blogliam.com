@@ -1,0 +1,26 @@
+---
+layout: post
+title: The First Blog Post
+time: 11:54 PM
+---
+
+Blog is completed. For now. Mentally exhausting weekend project with camping trip in the middle.
+Jekyll has been great, tons of fun to use. Love the templating, and how markdown/html are intertwined.
+Super dusty on my CSS since it's been a while, but we got there in the end. Decided on a little
+Bootstrap plus some hacky styling. Still need to implement the navbar on mobile but I don't think
+I have it in me right now. Coming soon I guess.
+
+![36°57'38.5"N 122°00'07.9"W](https://www.dropbox.com/s/2foaq00gsf7940v/20210327_222901.jpg?dl=1)
+
+_Pictured above: an important lighthouse_
+{: style="margin-left: 5%" }
+
+Big plans for this blog. Going to try and journal daily progress (although I'm telling myself that
+every two days is fine, since sometimes there's not much to talk about). I have a few exciting
+projects on the burner- namely [splinter](https://github.com/wg4568/splinter) which I will be
+talking about in the near future.
+
+For the most part my day-to-day consists of Chegg work and just general tinkering. I'm hoping this
+blog can bring the bigger picture into focus a little better. I have some opportunities on the horizon
+so I want to be ready for that. Also excited for collaboration with [luke](https://lam.blogliam.com/)
+and henry (not linked (yet)) which we hoped this project would foster.
