@@ -8,7 +8,7 @@ Recently I've been running into the same problem. Security researchers use HTTP 
 
 ![if purgatory was an http request](/assets/img/2021-04-05-bb-and-http/hell.png)
 
-_Pictured, HTTP hell_
+_pictured: http hell_
 {: style="margin-left: 5%" }
 
 The task:
@@ -21,7 +21,7 @@ So far I have completed steps 1 and 2. Here's what that looks like:
 
 ![http-minifier](/assets/img/2021-04-05-bb-and-http/minifier.png)
 
-_I wrote a little interface in Bootstrap_
+_an interface in Bootstrap_
 {: style="margin-left: 5%" }
 
 The messy request gets pasted on the left, and broken down by the parser. Filter rules can be set in the bottom right, and Content-Length is automatically calculated and inserted. Then the right hand textarea updates in real time with the appropriate headers removed.
