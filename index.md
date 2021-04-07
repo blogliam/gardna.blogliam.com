@@ -3,7 +3,7 @@ layout: default
 title: homepage
 ---
 
-# Recent activity!
+# Recent activity
 ___
 
 {% for post in site.posts limit:site.limits.feed %}
