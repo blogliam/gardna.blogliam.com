@@ -4,3 +4,5 @@ permalink: pretty
 limits:
   navbar: 12
   feed: 8
+exclude:
+  - .gitignore
