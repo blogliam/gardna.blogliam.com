@@ -3,10 +3,17 @@ layout: post
 title: Auto deploying from a Github repository
 date: 2021-04-06 22:16:00 -07:00
 ---
+{% assign filename = page.url %}
+{% for item in page.categories %}
+    {% capture remove %}{{ item }}/{% endcapture %}
+    {% capture filename %}{{ filename | remove:remove }}{% endcapture %}
+{% endfor %}
+{% capture filename %}{% unless filename == '/en/' or filename == '/index.html' %}_posts/{% endunless %}{% if page.categories contains 'en' %}en/{% endif %}{{ page.date | date: "%Y-%m-%d-" }}{% if filename == '/en/' %}index_{% endif %}{{ filename | remove:'/' | remove_first:'.html' }}{% unless filename == '/en/' or filename == '/index.html' %}.md{% else %}.html{% endunless %}{% endcapture %}
+{{ filename }}
 
 Today I upgraded blogliam.com by writing a tiny NPM project that listens to Github webhooks and automatically runs `git pull`. Basically it's just an HTTP server that you point your Github repo at.
 
-![webhook config](https://www.dropbox.com/s/ewqpj759m1d7cgo/Screenshot%202021-04-06%20222905.png?dl=1)
+![webhook config](/assets/img/2021-04-06-auto-deploy/webhooks.png)
 
 _no ddos pls ;)_
 {: style="margin-left: 5%" }
