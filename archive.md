@@ -11,7 +11,7 @@ ___
     {% for post in site.posts %}
     <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
-        <span class="mini">{{ post.date | date: "%D" }} {{ post.time }}</span>
+        <span class="mini">{{ post.date | date: "%D %I:%M %p" }}</span>
     </li>
     {% endfor %}
 </ol>
