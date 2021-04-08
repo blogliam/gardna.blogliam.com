@@ -12,7 +12,7 @@ Finally started work on my Burp plugin for my [HTTP minifier](/2021/04/05/bb-and
 _intellij built in editor_
 {: style="margin-left: 5%" }
 
-I also drafted a quick UI mockup. I'm thinking that the user will eventually be able to right click on an HTTP request > send to curtail.
+I also drafted a quick UI mockup. I'm thinking that the user will eventually be able to right click on an HTTP request, and send to curtail.
 
 ![the mockup](/assets/img/2021-04-07-curtail-minifier/mockup.png)
 
