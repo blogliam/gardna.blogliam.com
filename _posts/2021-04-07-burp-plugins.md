@@ -2,6 +2,7 @@
 layout: post
 title: Burp Plugins! (curtail)
 date: 2021-04-07 23:58:00 -07:00
+category: main
 ---
 
 Finally started work on my Burp plugin for my [HTTP minifier](/2021/04/05/bb-and-http/) project. I've gone with the name Curtail, because you _curtail_ the HTTP request. The hardest part so far has been UI design in Java. Burp uses all the JPanel stuff, not really sure what that API is called but it seems IntelliJ has a built in editor which I managed to get working.

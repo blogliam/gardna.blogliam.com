@@ -2,6 +2,7 @@
 layout: post
 title: Auto deploying from a Github repository
 date: 2021-04-06 22:16:00 -07:00
+category: main
 ---
 
 Today I upgraded blogliam.com by writing a tiny NPM project that listens to Github webhooks and automatically runs `git pull`. Basically it's just an HTTP server that you point your Github repo at.

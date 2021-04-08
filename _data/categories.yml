@@ -1,0 +1,5 @@
+- name: main
+  display: Blog
+
+- name: personal
+  display: Personal

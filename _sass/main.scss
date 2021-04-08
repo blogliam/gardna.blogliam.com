@@ -3,6 +3,7 @@ $bodyColor: #000000;
 $bodyFont: Georgia, serif;
 $trimColor: #878787;
 $contentWidth: 900px;
+$mobileWidth: 910px;
 
 html,
 body {
@@ -53,7 +54,7 @@ body {
     font-size: 0.8rem;
 }
 
-@media only screen and (max-width: $contentWidth) {
+@media only screen and (max-width: $mobileWidth) {
     #navbar {
         display: none;
     }
