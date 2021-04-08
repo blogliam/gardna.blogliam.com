@@ -3,7 +3,7 @@ $bodyColor: #000000;
 $bodyFont: Georgia, serif;
 $trimColor: #878787;
 $contentWidth: 900px;
-$mobileWidth: 910px;
+$mobileWidth: 790px;
 
 html,
 body {
@@ -35,8 +35,8 @@ body {
 }
 
 #content {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
     max-width: $contentWidth;
 }
 
