@@ -1,8 +1,9 @@
-url: gardna.blogliam.com
+url: https://gardna.blogliam.com/
 title: william's blog
+author: William
 permalink: pretty
 limits:
   navbar: 12
   feed: 8
-exclude:
-  - .gitignore
+exclude: [ .gitignore ]
+plugins: [ jekyll-feed ]
