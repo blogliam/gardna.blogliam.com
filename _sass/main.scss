@@ -4,7 +4,7 @@ $bodyFont: Georgia, serif;
 $trimColor: #878787;
 $navWidth: 300px;
 $contentWidth: 900px;
-$mobileWidth: 790px;
+$mobileWidth: 780px;
 
 html,
 body {
@@ -45,7 +45,7 @@ body {
     max-width: $contentWidth;
 }
 
-#content img {
+#content img, .video {
     max-width: 90%;
     max-height: 500px;
     margin-left: 5%;
