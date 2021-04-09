@@ -6,8 +6,9 @@
         <meta charset="utf-8">
 
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/assets/css/bootstrap-icons.css">
         <link rel="stylesheet" href="/assets/css/main.css">
+
+        {% include tools/header.html %}
     </head>
 
     <body>
@@ -49,7 +50,7 @@
 
                             <div class="pb-2">
                                 <a href="{{ social.url }}" target="_blank">
-                                    {% include icons/{{ social.icon }}.html size=32 %}
+                                    {% include tools/icon.html icon=social.icon width=32 %}
                                 </a>
                             </div>
                         {% endfor %}
