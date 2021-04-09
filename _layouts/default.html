@@ -23,7 +23,7 @@
 
                         <span>Navigation</span>
                         <ul>
-                            {% for item in site.data.sidebar %}
+                            {% for item in site.data.sidebar.links %}
                             <li><a href="{{ item.url }}">
                                 {{ item.name }}
                             </a></li>
@@ -44,8 +44,8 @@
 
                     <div id="socials" class="px-5 fixed-bottom">
                         <div class="d-flex justify-content-between pb-3">
-                        {% for name in site.data.socials.sidebar %}
-                            {% assign social = site.data.socials.socials[name] %}
+                        {% for name in site.data.sidebar.socials %}
+                            {% assign social = site.data.socials[name] %}
 
                             <div class="pb-2">
                                 <a href="{{ social.url }}" target="_blank">

@@ -1,11 +1,18 @@
-- name: gardna.net
-  url: https://gardna.net/
+links:
+  - name: gardna.net
+    url: https://gardna.net/
 
-- name: blogliam.com
-  url: https://blogliam.com/
+  - name: blogliam.com
+    url: https://blogliam.com/
 
-- name: all posts
-  url: /archive
+  - name: all posts
+    url: /archive
 
-- name: get in touch
-  url: /contact
+  - name: get in touch
+    url: /contact
+
+socials:
+  - github
+  - linkedin
+  - instagram
+  - discord
