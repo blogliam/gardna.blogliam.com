@@ -1,0 +1,11 @@
+coding:
+  text: white
+  background: rgb(153, 66, 93)
+
+updates:
+  text: white
+  background: rgb(66, 150, 153)
+
+personal:
+  text: white
+  background: rgb(95, 153, 66)

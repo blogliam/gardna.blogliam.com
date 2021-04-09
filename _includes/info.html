@@ -1,8 +1,15 @@
 <h6 class="monospace mb-3">
     <span style="text-decoration: underline;">{{ include.post.date | date: "%D %I:%M %p" }}</span>
     {% for category in include.post.categories %}
-        <a class="category" href="/archive#{{ category }}">
-            <span class="badge badge-secondary">{{ category }}</span>
-        </a>
+    {% assign color = site.data.categories[category] %}
+
+    <a class="category" href="/archive#{{ category }}">
+        <span
+            class="badge"
+            style="
+                color: {{ color.text }};
+                background-color: {{ color.background }};
+            ">{{ category }}</span>
+    </a>
     {% endfor %}
 </h6>
