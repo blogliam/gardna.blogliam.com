@@ -3,7 +3,6 @@ layout: default
 ---
 
 <h3>{{ page.title }}</h3>
-<h6 class="monospace">{{ page.date | date: "%D %I:%M %p" }}</h6>
-<hr />
+{% include info.html post=page %}
 
 {{ content }}

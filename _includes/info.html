@@ -1,0 +1,8 @@
+<h6 class="monospace">
+    <span style="text-decoration: underline;">{{ include.post.date | date: "%D %I:%M %p" }}</span>
+    {% for category in include.post.categories %}
+        <a class="category" href="/archive#{{ category }}">
+            <span class="badge badge-secondary">{{ category }}</span>
+        </a>
+    {% endfor %}
+</h6>
