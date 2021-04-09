@@ -4,8 +4,5 @@
 - name: blogliam.com
   url: https://blogliam.com/
 
-- name: recent
-  url: /
-
-- name: archive
+- name: all posts
   url: /archive
