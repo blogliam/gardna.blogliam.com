@@ -1,0 +1,31 @@
+sidebar: [ github, linkedin, instagram, discord ]
+socials:
+  github:
+    name: Github
+    icon: github
+    url: https://github.com/wg4568
+
+  linkedin:
+    name: LinkedIn
+    icon: linkedin
+    url: https://www.linkedin.com/in/william-d-gardner/
+
+  instagram:
+    name: Instagram
+    icon: instagram
+    url: https://instagram.com/gar_dna
+
+  email:
+    name: Email
+    icon: envelope-fill
+    url: mailto:william@gardna.com
+
+  resume:
+    name: Resume
+    icon: file-earmark-person
+    url: /assets/res/William_Gardner_Resume.pdf
+
+  discord:
+    name: Discord
+    icon: discord
+    url: https://gardna.net/discord

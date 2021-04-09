@@ -1,0 +1,26 @@
+---
+layout: default
+title: contact
+permalink: /contact/
+---
+
+<link rel="stylesheet" href="/assets/css/contact.css">
+
+<h1>Get in touch</h1>
+<hr/><br/>
+
+<ul>
+    {% for name in site.data.socials.socials %}
+    {% assign social = name[1] %}
+
+    <li class="item pb-2">
+        {% include icons/{{ social.icon }}.html size=32 %}
+        <p class="item-name ml-3">
+            <a href="{{ social.url }}" target="_blank">
+                {{ social.name }}
+            </a>
+        </p>
+    </li>
+
+    {% endfor %}
+</ul>

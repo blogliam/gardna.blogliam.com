@@ -6,6 +6,7 @@
         <meta charset="utf-8">
 
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/bootstrap-icons.css">
         <link rel="stylesheet" href="/assets/css/main.css">
     </head>
 
@@ -41,8 +42,18 @@
                         </ul>
                     </div>
 
-                    <div class="px-4 fixed-bottom">
+                    <div id="socials" class="px-5 fixed-bottom">
+                        <div class="d-flex justify-content-between pb-3">
+                        {% for name in site.data.socials.sidebar %}
+                            {% assign social = site.data.socials.socials[name] %}
 
+                            <div class="pb-2">
+                                <a href="{{ social.url }}" target="_blank">
+                                    {% include icons/{{ social.icon }}.html size=32 %}
+                                </a>
+                            </div>
+                        {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>

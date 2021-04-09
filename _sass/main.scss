@@ -2,6 +2,7 @@ $backgroundColor: #ffffff;
 $bodyColor: #000000;
 $bodyFont: Georgia, serif;
 $trimColor: #878787;
+$navWidth: 300px;
 $contentWidth: 900px;
 $mobileWidth: 790px;
 
@@ -18,8 +19,12 @@ body {
     border-radius: 5px;
 }
 
+#socials {
+    width: $navWidth;
+}
+
 #navbar {
-    max-width: 300px;
+    max-width: $navWidth;
     background-color: $trimColor;
     color: white;
     box-shadow: 0px 0px 10px 4px black;

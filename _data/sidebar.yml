@@ -6,3 +6,6 @@
 
 - name: all posts
   url: /archive
+
+- name: get in touch
+  url: /contact
