@@ -2,7 +2,7 @@
 layout: post
 title: Craigslistin
 date: 2021-04-08 13:01:00 -07:00
-category: personal
+category: [ personal ]
 ---
 
 I love selling stuff on Craiglist. Photographing product is cool and enjoyable. Exchange of a thing for a wad of cash is satisfying. All I gotta say.
