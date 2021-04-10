@@ -4,6 +4,6 @@ author: William Gardner
 permalink: /:year/:month/:day/:title/
 limits:
   navbar: 12
-  feed: 10
+  feed: 8
 exclude: [ .gitignore ]
 plugins: [ jekyll-feed ]
