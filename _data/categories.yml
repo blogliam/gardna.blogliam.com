@@ -13,3 +13,7 @@ personal:
 notes:
   text: white
   background: rgb(153, 66, 144)
+
+writeup:
+  text: white
+  background: rgb(66, 66, 153)
