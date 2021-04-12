@@ -16,4 +16,4 @@ On the todo list:
 3. Implement the "output" tab
 4. Add cURLification
 
-Full writeup coming soon with the goal of better documenting the Burpsuite plugin development process. Including: lessons learned along with practical advice and documentation. 
+Full writeup coming soon with the goal of better documenting the Burpsuite plugin development process. Will include lessons learned along with practical advice and documentation. 
