@@ -5,11 +5,11 @@ date: 2021-04-13 11:10:00 -07:00
 categories: [ coding, writeup ]
 ---
 
-As part of my experimentation with [GuaGAN](http://nvidia-research-mingyuliu.com/gaugan/) I thought I'd try to recreate something like [this](https://www.youtube.com/watch?v=y8kw8g1_JdY). My goal is to apply the AI filter to a generated world in a Unity environment. For this, I needed procedurally generated terrain. I experiemented with using the `Terrain` component, but I found it didn't grant enough control. I decided on implementing my own custom mesh which turned out to be more difficult than I imagined.
+As part of my experimentation with [GuaGAN](http://nvidia-research-mingyuliu.com/gaugan/) I thought I'd try to recreate something like [this](https://www.youtube.com/watch?v=y8kw8g1_JdY). My goal is to apply the AI filter to a generated world in a Unity environment. For this, I needed procedurally generated terrain. I experimented with using the `Terrain` component, but I found it didn't grant enough control. I decided on implementing a custom mesh which turned out to be more difficult than I imagined.
 
 #### Part 1: Three vertices, one triangle
 
-Like most game engines, Unity grants us access to the raw vertices and triangles passed to the CPU. These are arrays, one containing a series of points and the other containing instructions for how to connect them into triangles. For example, lets say we want to draw the triangle below:
+Like most game engines, Unity grants us access to the raw vertices and triangles passed to the CPU. These are arrays, one containing a series of points and the other containing instructions for how to connect them into triangles. For example, let's say we want to draw the triangle below:
 
 ![triangle](/assets/img/2021-04-13-custom-grids-unity/triangle.png)
 
@@ -64,7 +64,7 @@ public class TerrainGenerator : MonoBehaviour
 }
 ```
 
-As expected, this produces the triangle we initially sketched (despite lacking a texture). Since we added the mesh update code to the `Update()` function, changes we make to `vertices` and `triangles` will be visible in real time. It's also worth noting that the `GameObject` this script is attached to requires an empty mesh filter and a mesh renderer.
+As expected, this produces the triangle we initially sketched (despite lacking a texture). Since we added the mesh update code to the `Update()` function, changes we make to `vertices` and `triangles` will be visible in real-time. It's also worth noting that the `GameObject` this script is attached to requires an empty mesh filter and a mesh renderer.
 
 ![the first of many](/assets/img/2021-04-13-custom-grids-unity/first.png)
 
@@ -74,7 +74,7 @@ Now we know how to render a triangle, we're going to need to create a grid of ve
 
 ![the vertices](/assets/img/2021-04-13-custom-grids-unity/grid1.png)
 
-Each point is labeled with it's index in the `vertices` array. To calculate the index from a given `X, Z` position, we can simply do `(Z * width) + X`, since for every increment on the Z axis, we add `width` offset to the X position. This will also be important later on.
+Each point is labeled with its index in the `vertices` array. To calculate the index from a given `X, Z` position, we can simply do `(Z * width) + X`, since for every increment on the Z-axis, we add `width` offset to the X position. This will also be important later on.
 
 ```c#
 vertices = new Vector3[width * height];
@@ -101,7 +101,7 @@ private void OnDrawGizmos() {
 
 #### Part 3: Lots of triangles
 
-Time to connect the dots. Initially I thought this was going to be a huge pain, but once I sketched it out it was simplified into basic math. The important thing to note here is backface culling. If a triangle is drawn in a clockwise direction, it will be rendered--if not, it will be culled. This means we have to be careful when ordering our vertices in the `triangles` array.
+Time to connect the dots. Initially, I thought this was going to be a huge pain but once I sketched it out it was simplified into basic math. The important thing to note here is backface culling. If a triangle is drawn in a clockwise direction, it will be rendered--if not, it will be culled. This means we have to be careful when ordering our vertices in the `triangles` array.
 
 ![determines culling](/assets/img/2021-04-13-custom-grids-unity/direction.png)
 
@@ -121,7 +121,7 @@ triangles[4] = Q + width;
 triangles[5] = Q + width + 1;
 ```
 
-When we add a for-loop, and iterate over `triangles` to fill out the grid--success!
+When we add a for-loop and iterate over `triangles` to fill out the grid--success!
 
 ```c#
 triangles = new int[(width - 1) * (height - 1) * 6];
@@ -153,7 +153,7 @@ for (int z = 0; z < height - 1; z++) {
 
 #### Part 4: Perlin noise
 
-Perlin noise is a simple noise function that can generate natural(ish) looking heightmaps. In reality, you would want to layer multiple octaves of perlin noise at different frequencies to create better looking terrain, but for this example we'll just use a single layer.
+Perlin noise is a simple noise function that can generate natural(ish) looking heightmaps. In reality, you would want to layer multiple octaves of perlin noise at different frequencies to create better-looking terrain but for this example, we'll just use a single layer.
 
 ![perlin noise](/assets/img/2021-04-13-custom-grids-unity/perlin.png)
 
@@ -177,4 +177,4 @@ float CalculateHeight(int x, int z) {
 
 ![wavy](/assets/img/2021-04-13-custom-grids-unity/wavy.png)
 
-Success, 3D "Terrain"! This obviously needs some work--but for now it's a good example of creating custom meshes in Unity. The full code can be found [here](https://gist.github.com/wg4568/484dce199d38819f1b27fb42ee8f04b7).
+Success, 3D "Terrain"! This needs some work--but for now, it's a good example of creating custom meshes in Unity. The full code can be found [here](https://gist.github.com/wg4568/484dce199d38819f1b27fb42ee8f04b7).
