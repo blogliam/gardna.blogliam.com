@@ -13,7 +13,6 @@ Like most game engines, Unity grants us access to the raw vertices and triangles
 
 ![triangle](/assets/img/2021-04-13-custom-grids-unity/triangle.png)
 
-
 This triangle consists (like most) of three vertices. For the sake of simplicity, I've only shown the X and Z coordinates. We will assume that they are all on the same Y plane. We can initialize the array of vertices in Unity like follows:
 
 ```c#
@@ -69,8 +68,6 @@ As expected, this produces the triangle we initially sketched (despite lacking a
 
 ![the first of many](/assets/img/2021-04-13-custom-grids-unity/first.png)
 
-<br />
-
 #### Part 2: Lots of vertices
 
 Now we know how to render a triangle, we're going to need to create a grid of vertices like below.
@@ -101,8 +98,6 @@ private void OnDrawGizmos() {
 ```
 
 ![success](/assets/img/2021-04-13-custom-grids-unity/viewer1.png)
-
-<br />
 
 #### Part 3: Lots of triangles
 
@@ -154,11 +149,7 @@ for (int z = 0; z < height - 1; z++) {
 
 ![shaded result](/assets/img/2021-04-13-custom-grids-unity/viewer3.png)
 
-<br />
-
 ![wireframe close up](/assets/img/2021-04-13-custom-grids-unity/viewer4.png)
-
-<br />
 
 #### Part 4: Perlin noise
 
