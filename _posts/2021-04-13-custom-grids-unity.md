@@ -5,7 +5,7 @@ date: 2021-04-13 11:10:00 -07:00
 categories: [ coding, writeup ]
 ---
 
-As part of my experimentation with [GuaGAN](http://nvidia-research-mingyuliu.com/gaugan/) I thought I'd try to recreate something like [this](https://www.youtube.com/watch?v=y8kw8g1_JdY). My goal is to apply the AI filter to a generated world in a Unity environment. For this, I needed procedurally generated terrain. I experimented with using the `Terrain` component, but I found it didn't grant enough control. I decided on implementing a custom mesh which turned out to be more difficult than I imagined.
+As part of my experimentation with [GuaGAN](http://nvidia-research-mingyuliu.com/gaugan/) I thought I'd try to recreate something like [this](https://www.youtube.com/watch?v=y8kw8g1_JdY). My goal is to apply the AI filter to a procedurally generated world in a Unity environment. I experimented with using the `Terrain` component, but I found it didn't grant enough control. I decided on implementing a custom mesh which turned out to be more difficult than I imagined.
 
 #### Part 1: Three vertices, one triangle
 
@@ -13,7 +13,7 @@ Like most game engines, Unity grants us access to the raw vertices and triangles
 
 ![triangle](/assets/img/2021-04-13-custom-grids-unity/triangle.png)
 
-This triangle consists (like most) of three vertices. For the sake of simplicity, I've only shown the X and Z coordinates. We will assume that they are all on the same Y plane. We can initialize the array of vertices in Unity like follows:
+This triangle consists of three vertices. For the sake of simplicity, I've only shown the X and Z coordinates. We will assume that they are all on the same Y plane. We can initialize the array of vertices in Unity like follows:
 
 ```c#
 Vector3[] vertices = new Vector3[] {
@@ -23,7 +23,7 @@ Vector3[] vertices = new Vector3[] {
 };
 ```
 
-Now the GPU has the positional data, but it doesn't know how to connect the dots. This is the purpose of the `triangles` array--which describes in which order the GPU should connect the dots.
+Now the GPU has the positional data, but it doesn't know how to draw the triangle. The purpose of the `triangles` array is to describes in which order the GPU should connect the dots.
 
 ```c#
 int[] triangles = new int[] {
@@ -86,7 +86,7 @@ for (int z = 0; z < height; z++) {
 }
 ```
 
-We can also enable "Gizmo" rendering in the scene viewer to give us the following view--proving our code is working correctly.
+We can also enable "Gizmo" rendering in the scene viewer to give us the following view--to test if our code is working correctly.
 
 ```c#
 private void OnDrawGizmos() {
@@ -101,15 +101,15 @@ private void OnDrawGizmos() {
 
 #### Part 3: Lots of triangles
 
-Time to connect the dots. Initially, I thought this was going to be a huge pain but once I sketched it out it was simplified into basic math. The important thing to note here is backface culling. If a triangle is drawn in a clockwise direction, it will be rendered--if not, it will be culled. This means we have to be careful when ordering our vertices in the `triangles` array.
+Time to connect the dots. Initially, I thought this was going to be a huge pain but once I sketched it out it was simplified into basic math. The important thing to note here is backface culling. If a triangle is drawn in a clockwise direction, it will be rendered. If not, it will be culled. This means we have to be careful when ordering our vertices in the `triangles` array.
 
 ![determines culling](/assets/img/2021-04-13-custom-grids-unity/direction.png)
 
-To fill in the triangles, I came up with the following algorithm. Assuming Q is the vertice index of the bottom left vertice in a square, we can label each corner of the square as follows.
+To fill in the triangles, I came up with the following algorithm. Assuming Q is the index of the bottom left vertice in a square, we can label each corner of the square as follows.
 
 ![determines culling](/assets/img/2021-04-13-custom-grids-unity/vertices.png)
 
-Which translates into:
+This translates into:
 
 ```c#
 triangles[0] = Q;
@@ -121,7 +121,7 @@ triangles[4] = Q + width;
 triangles[5] = Q + width + 1;
 ```
 
-When we add a for-loop and iterate over `triangles` to fill out the grid--success!
+When we add a for-loop and iterate over `triangles` to fill out the grid.
 
 ```c#
 triangles = new int[(width - 1) * (height - 1) * 6];
