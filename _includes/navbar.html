@@ -1,0 +1,45 @@
+<div id="navbar" class="col min-vh-100">
+    <div class="container py-4 sticky-top">
+        <div class="px-2">
+            <h1 id="title">
+                <a href="/">{{ site.title }}</a>
+            </h1>
+
+            <br/>
+
+            <span>Navigation</span>
+            <ul>
+                {% for item in site.data.sidebar.links %}
+                <li><a href="{{ item.url }}">
+                    {{ item.name }}
+                </a></li>
+                {% endfor %}
+            </ul>
+
+            <span>Recent posts</span>
+            <ul>
+                {% for post in site.posts limit:site.limits.navbar %}
+                {% if post.feed != false %}
+                <li><a href="{{ post.url }}">
+                    {{ post.title | truncate: 24 }}
+                </a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div id="socials" class="px-5 fixed-bottom">
+            <div class="d-flex justify-content-between pb-3">
+
+            {% for name in site.data.sidebar.socials %}
+            {% assign social = site.data.socials[name] %}
+            <div class="pb-2">
+                <a href="{{ social.url }}" target="_blank">
+                    {% include tools/icon.html icon=social.icon width=32 %}
+                </a>
+            </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
