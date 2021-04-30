@@ -7,3 +7,6 @@ limits:
   feed: 8
 exclude: [ .gitignore ]
 plugins: [ jekyll-feed ]
+collections:
+  portfolio:
+    output: true

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<h3>{{ page.title }}</h3>
+
+<h6 class="monospace mb-3">
+    <span style="text-decoration: underline;">{{ page.date | date: "%B %Y" }}</span>
+
+    {% if page.source %}
+    <a class="category" href="{{ page.source }}">
+        <span class="badge badge-success">code</span>
+    </a>
+    {% endif %}
+
+    {% if page.demo %}
+    <a class="category" href="{{ page.demo }}">
+        <span class="badge badge-info">demo</span>
+    </a>
+    {% endif %}
+</h6>
+
+{{ content }}
