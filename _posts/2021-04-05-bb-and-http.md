@@ -5,8 +5,6 @@ date: 2021-04-05 21:06:00 -07:00
 categories: [ coding ]
 ---
 
-test
-
 Recently I've been running into the same problem. Security researchers use HTTP requests but engineers use cURL. Almost daily, I will open a bug bounty report to be greeted with a wall of text, only half of which is even necessary for the request to function. The researcher just copies and pastes the entire HTTP request from burp into a code block, and calls it a day. Of course along with the important info related to the exploit, they also bring with them a whole entourage of cookies, tracking data, and general junk that does nothing.
 
 ![if purgatory was an http request](/assets/img/2021-04-05-bb-and-http/hell.png)
