@@ -9,7 +9,7 @@ Since I'm hosting from my home network I decided it would be a good idea to thro
 
 By default, Cloudflare will encrypt all proxied traffic using their own SSL certificates however I already had SSL installed through Let's Encrypt. Simple enough, just revoke the Let's Encrypt certificates and remove them from my Nginx config. This worked but weirdly (and I still don't understand why) when inspecting the certificate it was still "Verified by Let's Encrypt." When I moved [gardna.net](https://gardna.net/), which didn't have Let's Encrypt set up already, the Cloudflare SSL worked fine. I imagine this is caused by some form of caching, but I have no idea where. I suspect this is one of those things that will just "go away" one day.
 
-The final step in my Cloudflare transfer was to configure Nginx to only accept Cloudflare IPs. This prevents attackers from bypassing the Cloudflare proxy by simply attacking the host server. This was relatively easy since Cloudflare publishes it's IP ranges [here](https://www.cloudflare.com/ips/).
+The final step in my Cloudflare transfer was to configure Nginx to only accept Cloudflare IPs. This prevents attackers from bypassing the Cloudflare proxy by simply targeting the host server directly. This was relatively easy since Cloudflare publishes it's IP ranges [here](https://www.cloudflare.com/ips/).
 
 I put the following in the http section of my `/etc/nginx/nginx.conf` file.
 
