@@ -10,7 +10,6 @@ Today I upgraded blogliam.com by writing a tiny NPM project that listens to Gith
 ![webhook config](/assets/img/2021-04-06-auto-deploy/webhooks.png)
 
 _no ddos pls ;)_
-{: style="margin-left: 5%" }
 
 It's pretty configurable, and allows you to work on other branches without updating the production site. Here's a snippet from the config file:
 
