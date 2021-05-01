@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Cloudflare and Nginx
+title: Setting up Cloudflare and Nginx
 date: 2021-04-30 21:59:00 -07:00
 categories: [ coding ]
 ---
