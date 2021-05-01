@@ -38,4 +38,4 @@ Now when a user hits my home IP address directly they get denied.
 
 ![denied](/assets/img/2021-04-30-cloudflare/denied.png)
 
-Overall, I was really impressed with the free services Cloudflare provides. It makes me feel a little more confident in the overall security of my home server.
+Overall, I was really impressed with the free services Cloudflare provides. It makes me feel a little more confident in the security of my home server.
