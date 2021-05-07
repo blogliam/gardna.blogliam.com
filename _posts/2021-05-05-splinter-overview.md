@@ -5,7 +5,7 @@ date: 2021-05-05 15:18:00 -07:00
 categories: [ coding, writeup ]
 ---
 
-Finally getting around to the [splinter](https://github.com/wg4568/splinter/) writeup. It's been a few weeks since I touched this project but I suspect I'll be getting things rolling again shortly so I figured it's about time to get this done. This is going to be a long one.
+Finally getting around to the [Splinter](https://github.com/wg4568/splinter/) writeup. It's been a few weeks since I touched this project but I suspect I'll be getting things rolling again shortly so I figured it's about time to get this done. This is going to be a long one.
 
 #### The problem
 
