@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Splinter&colon; Minecraft Performance Enhancements
+title: Splinter - Minecraft Performance Enhancements
 date: 2021-05-05 15:18:00 -07:00
 categories: [ coding, writeup ]
 ---
