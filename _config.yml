@@ -3,7 +3,7 @@ url: https://gardna.blogliam.com/
 author: William Gardner
 permalink: /:year/:month/:day/:title/
 limits:
-  navbar: 12
+  navbar: 18
   feed: 8
 exclude: [ .gitignore ]
 plugins: [ jekyll-feed ]
