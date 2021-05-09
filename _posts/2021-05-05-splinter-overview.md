@@ -37,13 +37,13 @@ So far, I have solo developed a working prototype that handles basic functionali
 
 {% include tools/embed.html source="youtube" id="qQSTF26Abw8" %}
 
-_There's a weird rendering error around 10 seconds, the stutter isn't caused by Splinter_
+_There's a rendering error around 10 seconds, the stutter isn't caused by Splinter_
 
 As you can see, a lot of features to be implemented. Chat isn't synchronized--nor is the player list. Join and leave messages need to be disabled and certain edge cases such as redstone across the border must be handled. Most importantly, entities and players need to be visible even if they exist on another server. There's a long way to go, but this demo is critical in proving the concept's viability.
 
 #### Splinter community
 
-Now for the big news. I've spent the past few days building a community surrounding the Splinter project in official partnership with [CliqueCraft LLC](https://classic.cliquemc.net/). My role in the company essentially boils down to "open-source community manager." We've created a branch of CliqueCraft titled OpenClique, in which we plan on developing a variety of open-source Minecraft projects with community involvement as a primary focus.
+Now for the big news. I've spent the past few days building a community surrounding the Splinter project in official partnership with [CliqueCraft LLC](https://cliquemc.net/). My role in the company essentially boils down to "open-source community manager." We've created a branch of CliqueCraft titled OpenClique, in which we plan on developing a variety of open-source Minecraft projects with community involvement as a primary focus.
 
 As part of this effort, the CliqueCraft owner who goes by [Brandominos](https://brandominos.com) created a TikTok demonstrating the Splinter project which nicely sums up progress so far. You can find it linked below.
 
